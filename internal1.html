@@ -1,0 +1,53 @@
+<html>
+<head>
+<script type="text/javascript">
+function validateForm(){
+var name=document.forms["registrationForm"]["name"].value;
+var email=document.forms["registrationForm"]["email"].value;
+var year=document.forms["registrationForm"]["year"].value;
+if(name===""||email===""||year===""){
+alert("Error!Please fill all fields");
+return false;
+}
+else{
+alert("Registration Successful!");
+return true;
+}
+}
+</script>
+</head>
+<body bgcolor="lightblue">
+<center>
+<font face="Brush Script MT" size="6" color="darkblue">
+DATA DETOX REGISTRATION</font>
+</center>
+<form name="registrationForm" method="post" action="internal1.html" onsubmit="return validateForm()">
+<table align="center" cellspacing="10">
+<tr>
+<td>NAME: </td>
+<td>input type="text" name="name"</td>
+</tr>
+<tr>
+<td>EMAIL: </td>
+<td>input type="text" name="email"</td>
+</tr>
+<tr>
+<td>YEAR: </td>
+<td><select name="year">
+<option value="">select the year</option>
+<option value="1">1st</option>
+<option value="2">2nd</option>
+<option value="3">3rd</option>
+<option value="4">4th</option>
+</select></td>
+</tr>
+<tr>
+<td colspan="2">
+input type="Register" value="submit"
+input type="Clear" value="reset"</td>
+</tr>
+</table>
+</form>
+</body>
+
+</html>
